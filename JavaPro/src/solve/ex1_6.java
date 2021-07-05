@@ -2,7 +2,7 @@ package solve;
 
 import java.util.Scanner;
 
-public class exam1_6 {
+public class ex1_6 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
