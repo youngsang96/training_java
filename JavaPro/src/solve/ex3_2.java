@@ -27,13 +27,13 @@ public class ex3_2 {
 		  {
 		    System.out.println("1 에서 9 까지의 숫자를 입력하세요." + " 끝내려면 -1  입력하세요.");
 		    temp= scan.nextInt();
-		    for(int i=0; i < digits[temp].length; i++) {
-			System.out.println(digits[temp][i]);
+		    if(temp == -1) {
+				   System.out.println("end");
+				   break;
+			   } 
+				for(int i=0; i < digits[temp].length; i++) {
+					System.out.println(digits[temp][i]);
 			   }
-		   if(temp == -1) {
-			   System.out.println("end");
-			   break;
-		   }
 		   }
 			 
 		}
