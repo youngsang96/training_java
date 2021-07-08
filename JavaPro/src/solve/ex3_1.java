@@ -6,39 +6,37 @@ public class ex3_1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner scan=new Scanner(System.in);
-		System.out.print("홀수개의 배열크기를 입력하세요 :");
-		int num=scan.nextInt();
+		Scanner scan = new Scanner(System.in);
+		System.out.println("홀수개의 배열 크기를 입력하세요");
+		int num = scan.nextInt();
 		char[][] matrix = new char[num][num];
-       
-		int CENTER = (int) matrix.length/2 ; 
-        int K=0; 
-        int BEGIN = 0; 
-        int END = matrix[0].length; 
-        
-        for(int ROW=0;ROW<matrix.length;ROW++){         
-            if(ROW<=CENTER){
-                BEGIN = ROW;
-                END = (matrix[ROW].length -1) - ROW;
-            }else{
-                BEGIN = (matrix[ROW].length -1) - ROW;
-                END = ROW;     
-            }
-            for(int COL=BEGIN;COL<=END;COL++){             
-                K = K+1;
-                matrix[ROW][COL] = (char) K;
-            }              
-        }      
-        for(int i = 0; i<matrix.length;i++){        
-            for(int j =0; j< matrix[i].length;j++){
-                if(matrix[i][j] == 0) {
-                    System.out.print(" ");
-                }else{
-                    System.out.print((int)matrix[i][j]+" ");
-                }              
-            }
-            System.out.println();
-        }      
+		int number=0;
+		int left = 0;
+		int right = num-1;
+		boolean chk = true;
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix[i].length; j++) {
+				if(left<=j && j<=right) {	
+					matrix[i][j]='*';
+					number++;
+				
+				}
+			}
+			if (left==right) chk=false;
+			if(chk) {	left++;	right--;}
+			else {				left--; right++;}
+		}
+		
+		
+		
+		//matrix 출력하기
+		for(int i=0;i < matrix.length;i++) {
+			for(int j=0; j< matrix[i].length;j++) {
+				if(matrix[i][j]=='*') System.out.print(number--+ (number>9?" ":"  "));
+				else System.out.print("   ");
+			}
+			System.out.println();
+		}
     }
 
 	}
