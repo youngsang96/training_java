@@ -22,7 +22,7 @@ public class MathEx2 {
 		m.a=10; m.b=20;
 		System.out.println(m.add1());
 		System.out.println("1=====");
-		System.out.println(m.add2(100,200));
+		System.out.println(Math2.add2(100,200));
 		System.out.println(m.x);
 		System.out.println("2=====");
 		System.out.println(Math2.add2(100, 200));
