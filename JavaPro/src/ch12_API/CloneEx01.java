@@ -15,7 +15,7 @@ class Point implements Cloneable{
 		return "Point [x ="+x+", y= "+y+"]";
 	}
 	@Override
-	public Object clone() {
+	protected Object clone() {
 		try {
 			return super.clone();
 		}catch(CloneNotSupportedException e) {
