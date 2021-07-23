@@ -41,11 +41,46 @@ public class LambdaEx08 {
 			@Override
 			public String apply(Student t) {return t.getName();
 		}});
+		System.out.print("영어 점수: ");
+		printInt(s->s.getEng());
+		System.out.print("수학 점수: ");
+		printInt(s->s.getMath());
+		System.out.print("영어 점수 합계: ");
+		printTot(t->t.getEng());
+		System.out.print("수학 점수 합계: ");
+		printTot(t->t.getMath());
+		System.out.print("영어 점수 평균: ");
+		printAvg(t->t.getEng());
+		System.out.print("수학 점수 평균: ");
+		printAvg(t->t.getMath());
 	}
+
 private static void printString(Function<Student,String> f) {
 	for(Student s : list) {
 		System.out.print(f.apply(s)+", ");
 	}
 	System.out.println();
+}
+
+private static void printInt(ToIntFunction<Student> f) {
+	for(Student s : list) {
+		System.out.print(f.applyAsInt(s)+", ");
+	}
+	System.out.println();
+}
+
+private static void printAvg(ToIntFunction<Student> f) {
+	double sum=0;
+	for(Student s : list) {
+		sum+=f.applyAsInt(s);
+	}
+	System.out.println(sum/list.length);
+}
+private static void printTot(ToIntFunction<Student> f) {
+	int sum=0;
+	for(Student s : list) {
+		sum +=f.applyAsInt(s);
+	}
+	System.out.println(sum);
 }
 }
