@@ -1,0 +1,5 @@
+BuffereReader : 버퍼를 내부적으로 추가하여 IO 선능을 향상시키는 스트림.
+
+>> readLine() 메서드를 이용하여 한 줄씩 읽기 가능.
+
+new BuffereReader(Reader) 객체 생성 가능.
