@@ -1,0 +1,24 @@
+1:파일에 예외 메세지 저장하기
+
+2:===================
+
+Fri Jul 30 10:21:56 KST 2021
+
+java.lang.Exception: 파일에 예외 메세지 저장하기
+	at JavaPro/ch18_io.FileOutputStreamEx02.secondMethod(FileOutputStreamEx02.java:15)
+	at JavaPro/ch18_io.FileOutputStreamEx02.firstMethod(FileOutputStreamEx02.java:11)
+	at JavaPro/ch18_io.FileOutputStreamEx02.main(FileOutputStreamEx02.java:9)
+3:===============
+
+1:파일에 예외 메세지 저장하기
+
+2:===================
+
+Fri Jul 30 10:22:51 KST 2021
+
+java.lang.Exception: 파일에 예외 메세지 저장하기
+	at JavaPro/ch18_io.FileOutputStreamEx02.secondMethod(FileOutputStreamEx02.java:15)
+	at JavaPro/ch18_io.FileOutputStreamEx02.firstMethod(FileOutputStreamEx02.java:11)
+	at JavaPro/ch18_io.FileOutputStreamEx02.main(FileOutputStreamEx02.java:9)
+3:===============
+
