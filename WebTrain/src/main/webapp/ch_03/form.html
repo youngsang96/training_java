@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<style>
+table, th, tr, td {
+	border: solid 1px black;
+	border-collapse: collapse;
+	padding: 8px;
+}
+</style>
+<title>문의 게시판</title>
+</head>
+<body>
+<form>
+<table>
+
+<tr><td>이름</td><td><input type="text"></td></tr>
+<tr><td>비밀번호</td><td><input type="password"></td></tr>
+<tr><td>이메일</td><td><input type="text">
+
+@<select>
+<option>선택하세요</option>
+<option>naver.com</option>
+<option>gmail.com</option>
+<option>nate.com</option>
+<option>hanmail.net</option>
+</select></td></tr>
+
+<tr><td>제목</td><td><input type="text"></td></tr>
+<tr><td>내용</td><td><textarea rows='10' cols='50'> </textarea></td></tr>
+<tr><td>파일첨부</td><td><input type="file"></td></tr>
+<tr><td>정보공개</td><td><input type="radio" checked name='info'> 공개<input type="radio" name='info'> 비공개</td></tr>
+<tr><td>취미</td><td><input type="checkbox" checked> 독서<input type="checkbox"> 게임<input type="checkbox"> 영화감상</td></tr>
+<tr><td colspan='2' align="center"> <button>입력</button></td></tr>
+</table>
+</form>
+</body>
+</html>
