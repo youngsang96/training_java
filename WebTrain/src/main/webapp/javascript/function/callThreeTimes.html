@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+function callThreeTimes (callback){
+	for(let i =0; i<3; i++){
+		callback(i)
+	}
+}
+function print(i){
+	console.log(`${i}번째 함수 호출`)
+}
+
+callThreeTimes(function(i){
+	console.log(`${i}번째 함수호출`)
+})
+</script>
+</head>
+<body>
+
+</body>
+</html>

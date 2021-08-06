@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+//선언적 함수 : 선언 후에 함수를 실행가능
+const fun = function(){
+	console.log('함수 내부의 코드입니다...1')
+	console.log('함수 내부의 코드입니다...2')
+	console.log('함수 내부의 코드입니다...3')
+	console.log(' ')
+}
+
+fun()
+fun()
+
+console.log(typeof fun)
+console.log(fun)
+
+//익명함수 : 어디서든 실행가능
+function f(x){
+	return x*x
+}
+
+console.log(f(3))
+</script>
+</head>
+<body>
+
+</body>
+</html>
