@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+document.addEventListener('DOMContentLoaded', () =>{
+	const textarea = document.querySelector('textarea')
+	const h1 = document.querySelector('h1')
+	
+	textarea.addEventListener('keyup', (event) => {
+	const length=textarea.value.length
+	h1.textContent = `글자 수: ${length}`
+	if(length > 10){
+		h1.style.color='red'
+	}else h1.style.color='black'
+	})
+})
+</script>
+</head>
+<body>
+<h1></h1>
+<textarea cols="100" rows="50"></textarea>
+</body>
+</html>
