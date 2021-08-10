@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+const student = {}
+student.name = '나자바'
+student.hobby = '피아노'
+student.dream = '프로그래머'
+
+delete student.dream
+let aaa = JSON.stringify(student);
+
+console.log(typeof student)
+console.log(typeof JSON.stringify(student))
+console.log(typeof JSON.stringify(student,null,2))
+alert(student.name)
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
