@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta charset="EUC-KR">
+    <title></title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+
+        select.addEventListener('change', (event) => {
+          const options = event.currentTarget.options
+          const list = []
+          for (const option of options) {
+            if (option.selected) {
+              list.push(option.textContent)
+            }
+          }
+          p.textContent = `선택: ${list.join(',')}`
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <select multiple>
+      <option>떡볶이</option>
+      <option>순대</option>
+      <option>오뎅</option>
+      <option>튀김</option>
+    </select>
+    <p></p>
+  </body>
+</html>

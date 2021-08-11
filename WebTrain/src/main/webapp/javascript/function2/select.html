@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const select = document.querySelector('select')
+        const p = document.querySelector('p')
+
+        select.addEventListener('change', (event) => {
+          const options = event.currentTarget.options
+          const index = event.currentTarget.options.selectedIndex
+
+          p.textContent = `º±≈√: ${options[index].textContent}`
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <select>
+      <option>∂±∫∫¿Ã</option>
+      <option>º¯¥Î</option>
+      <option>ø¿µ≠</option>
+      <option>∆¢±Ë</option>
+    </select>
+    <p>º±≈√: ∂±∫∫¿Ã</p>
+  </body>
+</html>

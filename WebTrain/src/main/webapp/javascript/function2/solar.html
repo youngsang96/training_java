@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    
+        window.onload = function () {
+            // 문서 객체를 가져오고 설정합니다.
+            const sun = document.getElementById('sun');
+            const earth = document.getElementById('earth');
+            const moon = document.getElementById('moon');
+
+            sun.style.position = 'absolute';
+            earth.style.position = 'absolute';
+            moon.style.position = 'absolute';
+
+            sun.style.left = 250 + 'px';
+            sun.style.top = 200 + 'px';
+
+            // 변수를 선언합니다.
+            let earthAngle = 0;
+            let moonAngle = 0;
+
+            // 애니메이션을 시작합니다.
+            setInterval(function () {
+                // 각도를 사용해 지구와 달의 좌표를 구합니다.
+                let earthLeft = 250 + 150 * Math.cos(earthAngle);
+                let earthTop = 200 + 150 * Math.sin(earthAngle);
+                let moonLeft = earthLeft + 50 * Math.cos(moonAngle);
+                let moonTop = earthTop + 50 * Math.sin(moonAngle);
+
+                // 위치를 이동합니다.
+                earth.style.left = earthLeft + 'px';
+                earth.style.top = earthTop + 'px';
+                moon.style.left = moonLeft + 'px';
+                moon.style.top = moonTop + 'px';
+
+                // 각도를 변경합니다.
+                earthAngle += 0.1;
+                moonAngle += 0.3;
+            }, 1000 / 30);
+        };
+    </script>
+</head>
+<body>
+    <h1 id="sun">s</h1>
+    <h1 id="earth">e</h1>
+    <h1 id="moon">m</h1>
+</body>
+</html>
